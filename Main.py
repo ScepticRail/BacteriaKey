@@ -4,10 +4,19 @@ def ask(question):
 
 fail = "Please answer with either Y or N.\n If you did answer with Y or N, it is likely that I do not know what your bacterium is."
 
-print "This is BacteriaKey v0.3"
-print "This was created as a side project by ScepticRail when attempting to learn Python."
-print "This dichotomous key is largely based on that of the University of Wyoming."
-print "Any and all errors are, of course, intentional. Reporting them is futile."
+print ""
+
+print """This is BacteriaKey v0.32
+
+This was created as a side project by ScepticRail when attempting to learn Python.
+
+This dichotomous key is largely based on that of the University of Wyoming.
+It allows for the identification of approximately 20 different bacteria.
+Please note that only tests identifying Coccal bacteria are showcased here.
+
+Any and all errors are, of course, intentional. Reporting them is futile.
+
+"""
 
 print""
 
@@ -17,7 +26,7 @@ print ""
 
 grampos = ask("Is your bacterium Gram-positive?")
 
-if grampos:
+if grampos:	
 	
 	# Staphylococcus and Micrococcus are catalase positive. Streptococcus and Enterococcus. are catalase negative.
 	catalase = ask("Is your bacterium catalase-positive?") 
