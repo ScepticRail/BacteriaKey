@@ -18,11 +18,13 @@ grampos = ask("Is your bacterium Gram-positive?")
 
 if grampos:
 	
-	catalase = ask("Is your bacterium catalase positive?") # Staphylococcus and Micrococcus are catalase positive. Streptococcus and Enterococcus. are catalase negative.
+	# Staphylococcus and Micrococcus are catalase positive. Streptococcus and Enterococcus. are catalase negative.
+	catalase = ask("Is your bacterium catalase positive?") 
 	
 	if catalase:		
-			
-		coagulase = ask("Is your bacterium coagulase positive?") # This test differentiates Staphylococcus aureus from other coagulase negative Staphylococcus species.
+		
+		# This test differentiates Staphylococcus aureus from other coagulase negative Staphylococcus species.
+		coagulase = ask("Is your bacterium coagulase positive?") 
 		
 		if coagulase:
 			print "Your bacterium is STAPHYLOCOCCUS AUREUS."
@@ -35,11 +37,13 @@ if grampos:
 	
 	elif not catalase:
 		
-		AG_haemo = ask("Does your bacterium exhibit alpha or gamma haemolysis?") # Partial haemolysis is termed alpha-haemolysis. Streptococcus pneumoniae and Streptococcus mitis are a-haemolytic 
+		# Partial haemolysis is termed alpha-haemolysis. Streptococcus pneumoniae and Streptococcus mitis are a-haemolytic 
+		AG_haemo = ask("Does your bacterium exhibit alpha or gamma haemolysis?") 
 		
 		if AG_haemo:
 		
-			esculin = ask("Is your bacterium capable of hydrolising esculin in the presence of bile?") # commonly used to identify members of the genus Enterococcus (E faecalis and E. faecium). 
+			# commonly used to identify members of the genus Enterococcus (E faecalis and E. faecium). 
+			esculin = ask("Is your bacterium capable of hydrolising esculin in the presence of bile?")
 			
 			if esculin:
 			
@@ -62,11 +66,13 @@ if grampos:
 		
 		elif not AG_haemo:
 		
-			B_haemo = ask("Does your organism exhibit beta haemolysis?") # Staphylococcus aureus, Streptococcus pyogenes and Streptococcus agalactiae are b-haemolytic 
+			# Staphylococcus aureus, Streptococcus pyogenes and Streptococcus agalactiae are b-haemolytic 
+			B_haemo = ask("Does your organism exhibit beta haemolysis?") 
 			
 			if B_haemo:
-			
-				CAMP = ask("Does your organism express the CAMP factor?") # differentiate between Staphylococcus aureus and Streptococcus agalactiae
+				
+				# differentiate between Staphylococcus aureus and Streptococcus agalactiae
+				CAMP = ask("Does your organism express the CAMP factor?") 
 				
 				if CAMP:
 					print "Your bacterium is STREPTOCOCCUS AGALACTIAE."
@@ -84,7 +90,8 @@ if grampos:
 	
 elif not grampos:
 	
-	oxidase = ask("Is your bacterium oxidase positive?") # used to distinguish between oxidase negative Enterobacteriaceae and oxidase positive Pseudomadaceae. 
+	# used to distinguish between oxidase negative Enterobacteriaceae and oxidase positive Pseudomadaceae. 
+	oxidase = ask("Is your bacterium oxidase positive?") 
 	
 	if oxidase:
 	
@@ -94,9 +101,13 @@ elif not grampos:
 			print "Your bacterium is STAPHYLOCOCCUS EPIDERMIDIS."
 					
 		elif not nitrate:
-			print "I do not know."	
+			print: "
+			
+		else:	
+			print fail
 		
 	elif not oxidase:
+		print PLACEHOLDER
 	
 	else:
 		print fail
