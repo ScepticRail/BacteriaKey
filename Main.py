@@ -3,7 +3,7 @@ def ask(question):
 	return raw_input("> ") == "Y"
 
 
-print "This is Bacterial Identification Tool v0.02"
+print "This is BacteriaKey v0.03"
 print "This was created as a side project by ScepticRail when attempting to learn Python."
 print "Any and all errors are, of course, intentional. Reporting them is futile."
 
@@ -17,37 +17,32 @@ grampos = ask("Is your bacterium Gram-positive?")
 
 if grampos:
 	
-	print "Is your bacterium catalase positive?\n"
+	catalase = ask("Is your bacterium catalase positive?")
 	
-	catalase = raw_input(">")
+	if catalase:			
+		
+		coagulase = ask("Is your bacterium coagulase positive?")
+		
+		if coagulase:
+			print "Your bacterium is STAPHYLOCOCCUS AUREUS."
+					
+		elif not coagulase:
 	
-	if catalase == "Y":
-	
-		print "Is your bacterium coagulase positive?\n"
-				
-	coagulase = raw_input(">")
-				
-	if coagulase == "Y":
-		print "Your bacterium is STAPHYLOCOCCUS AUREUS."
-					
-	elif coagulase == "N":
-		print "Is your bacterium capable of reducing nitrate to nitrate or othe nitrogenous compounds?\n"
-					
-	nitrate = raw_input(">")
-					
-	if nitrate == "Y":
-		print "Your bacterium is STAPHYLOCOCCUS EPIDERMIDIS."
-					
-	elif nitrate == "N":
-		print "I do not know."
+			nitrate = ask("Is your bacterium capable of reducing nitrate to nitrate or othe nitrogenous compounds?")
 			
-	elif catalase == "N":
+			if nitrate:
+				print "Your bacterium is STAPHYLOCOCCUS EPIDERMIDIS."
+					
+			elif not nitrate:
+				print "I do not know."
+			
+	elif not catalase:
 		print "Does your bacterium exhibit alpha haemolysis?"
 						
 	else:
-		print "Please answer with either Y or N"
+		print "Please answer with either \'Y\' or \'N\'"
 	
-elif not grampos:
+elif not gramtest:
 	print "Very well."
 
 else:
