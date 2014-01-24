@@ -4,7 +4,7 @@ def ask(question):
 
 fail = "Please answer with either Y or N.\n If you did answer with Y or N, it is likely that I do not know what your bacterium is."
 
-print "This is BacteriaKey v0.1"
+print "This is BacteriaKey v0.15"
 print "This was created as a side project by ScepticRail when attempting to learn Python."
 print "Any and all errors are, of course, intentional. Reporting them is futile."
 
@@ -84,7 +84,22 @@ if grampos:
 	
 elif not grampos:
 	
+	oxidase = ask("Is your bacterium oxidase positive?") # used to distinguish between oxidase negative Enterobacteriaceae and oxidase positive Pseudomadaceae. 
 	
+	if oxidase:
+	
+		nitrate = ask("Is your bacterium capable of reducing nitrate to nitrate or othe nitrogenous compounds?")
+			
+		if nitrate:
+			print "Your bacterium is STAPHYLOCOCCUS EPIDERMIDIS."
+					
+		elif not nitrate:
+			print "I do not know."	
+		
+	elif not oxidase:
+	
+	else:
+		print fail
 
 else:
 	print fail
