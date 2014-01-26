@@ -6,7 +6,7 @@ fail = "Please answer with either Y or N.\n If you did answer with Y or N, it is
 
 print ""
 
-print """This is BacteriaKey v0.32
+print """This is BacteriaKey v0.3
 
 This was created as a side project by ScepticRail when attempting to learn Python.
 
