@@ -90,8 +90,8 @@ if grampos:
 				elif not CAMP:
 					print "Your bacterium is STREPTOCOCCUS PYOGENES."
 				
-				else:
-					print fail
+			else:
+				print fail
 		else:
 			print fail
 			
