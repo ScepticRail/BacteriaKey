@@ -191,9 +191,9 @@ elif not grampos:
 		elif not lactose:
 		
 			# can your bacterium swim through a medium called SIM (who' knows)
-			motile = ask("Is your bacterium motile?")
+			motile2 = ask("Is your bacterium motile?")
 			
-			if motile:
+			if motile2:
 					
 					tryptophan = ask("Is your bacterium able to convert tryptophan to indole?")
 						
@@ -216,7 +216,7 @@ elif not grampos:
 					else:
 						print fail
 			
-			elif not motile:
+			elif not motile2:
 					print "Your bacterium is SHIGELLA DYSENTERIAE."
 				
 			else:
