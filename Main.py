@@ -159,12 +159,12 @@ elif not grampos:
 						
 						elif not tryptophan:
 							
-							nitrate = ask("Is your bacterium capable of reducing nitrate to nitrate or othe nitrogenous compounds?")
+							nitrate2 = ask("Is your bacterium capable of reducing nitrate to nitrate or othe nitrogenous compounds?")
 			
-							if nitrate:
+							if nitrate2:
 								print "Your bacterium is PSEUDOMONAS AERUGINOSA."
 					
-							elif not nitrate:
+							elif not nitrate2:
 								print "Your bacterium is ACTINOBACTER CALCOACETICUS."
 			
 							else:	
